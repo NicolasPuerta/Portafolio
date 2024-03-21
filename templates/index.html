@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio de Desarrollador Web - Estilo Moderno</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css' )}}" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-gradient-light opacity-80"
+      id="mainNav"
+    >
+      <!-- Contenido de la barra de navegación -->
+      <a class="navbar-brand" href="#">Mi Portafolio</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#sobre-mi">Sobre Mí</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portafolio">Portafolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="bg-gradient-dark py-5">
+      <!-- Contenido de la sección Sobre Mí -->
+      <div class="container about">
+        <h2 class="text-center mb-4" id="aboutTitle">Sobre Mí</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>¡Hola! Soy Nicolas</h3>
+            <p>
+              ¡Bienvenido a mi portafolio! Soy un desarrollador web apasionado
+              por crear experiencias digitales increíbles.
+            </p>
+            <!-- agrega información acera de tu perfil profesional (lo que eres o esperas ser) -->
+
+            <!-- Agrega el enlace de descarga de la hoja de vida con un ícono -->
+            <a href="{{url_for('static', filename='/assets/Hoja de vida Nicolas.pdf' )}}" download>
+              <i class="fa fa-download"></i> Descargar Hoja de Vida
+            </a>
+          </div>
+          <div class="col-md-4">
+            <img
+              src="{{url_for('static', filename='/assets/img/FxIssxtaAAIdRo9.jpg_large' )}}"
+              alt="Imagen de Perfil"
+              class="img-fluid rounded-circle"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portafolio -->
+    <section id="portafolio" class="py-5 bg-light">
+      <!-- Contenido de la sección Portafolio -->
+      <div class="container">
+        <h2 class="text-center mb-4">Portafolio</h2>
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <!-- Proyecto 1 -->
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="{{url_for('static', filename='/assets/img/1SvzKctRCi8bwB0QPdOZkBP0pRhsOqZpl0wjs6y0.png' )}}" class="card-img-top" alt="Proyecto 1">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">administrador de tareas</h5>
+                      <p class="card-text">Es un administrador de tareas,tiene un inicio de sesión y un registrador para administrar varias tareas desde varias cuentas, con dichas tareas puedes hacer todo lo que tiene un CRUD.</p>
+                      <a
+                        href="https://github.com/NicolasPuerta/Python-Task"
+                        class="btn btn-primary"
+                        >Ver más</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Proyecto 2 -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img
+                      src={{url_for('static', filename='/assets/img/unnamed.png' )}}
+                      class="card-img-top"
+                      alt="Proyecto 2"
+                    />
+                    <div class="card-body text-center">
+                      <h5 class="card-title">sudoku</h5>
+                      <p class="card-text">Es un pequello juego de consola en la cual podemos jugar al tipico juego de sudoku, en este pequeño proyecto utilice bases de datos para guardar los tiempos de finalización.</p>
+                      <a
+                        href="https://github.com/NicolasPuerta/SudokuProject/tree/master/sudoku"
+                        class="btn btn-primary"
+                        >Ver más</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Proyecto 3 -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img
+                      src={{url_for('static', filename='/assets/img/descarga.jpg' )}}
+                      class="card-img-top"
+                      alt="Proyecto 3"
+                    />
+                    <div class="card-body text-center">
+                      <h5 class="card-title">calculadora de notas</h5>
+                      <p class="card-text">Es una pequeña calculadora de notas para alguna universidad hecha en consola, la cual nos permite añadir y calcular las notas de alguna asginatura.</p>
+                      <a
+                        href="https://github.com/NicolasPuerta/Calculadora-de-notas"
+                        class="btn btn-primary"
+                        >Ver más</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Añade más proyectos aquí -->
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-5">
+      <!-- Contenido de la sección Contacto -->
+      <div class="container">
+        <h2 class="text-center mb-4">Contacto</h2>
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <form action="/contacto" method="POST" class="Formulario">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea
+                  name="mensaje"
+                  id="mensaje"
+                  rows="5"
+                  class="form-control"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                id="btnEnviar"
+                class="btn btn-success btn-block"
+              >
+                Enviar Mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="bg-light py-4">
+      <!-- Contenido del pie de página -->
+      <div class="container text-center">
+        <!-- Enlaces de Redes Sociales -->
+        <div class="social-icons text-white">
+          <a
+            href="https://www.linkedin.com/in/nicolas-puerta-207155231/"
+            target="_blank"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="nicopuerta06@gmail.com"><i class="far fa-envelope"></i></a>
+          <a href="https://github.com/NicolasPuerta" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+        <!-- Información adicional del pie de página -->
+        <p>&copy; 2024 - Todos los derechos reservados</p>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src={{url_for('static', filename='main.js' )}}></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
