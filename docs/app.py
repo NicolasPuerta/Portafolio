@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com' 
 app.config['MAIL_PORT'] = 587 
